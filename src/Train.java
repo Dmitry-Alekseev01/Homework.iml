@@ -10,6 +10,12 @@ public class Train {
         }
     }
 
+    public static void squareElements(int[] array){
+        for(int i = 0; i < array.length; i++){
+            array[i] *= array[i];
+        }
+    }
+
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         System.out.println("Введите количество вагонов в поезде: ");
@@ -22,5 +28,8 @@ public class Train {
             sum += train[i];
         }
         System.out.println("Количество пассажиров: " + sum);
+
+        squareElements(train);
+        System.out.println(Arrays.toString(train));
     }
 }
